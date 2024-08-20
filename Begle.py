@@ -22,6 +22,14 @@ class Sistema:
                 paciente.mostrarDatos()
                 return
         print("Paciente no encontrado.")
+    
+    def verificarPaciente(self,cedula):
+        encontrado = False
+        for p in self.__lista_pacientes:
+            if cedula == p.verCedula():
+                encontrado = True
+                break
+        return encontrado
 
 class Paciente:
     def __init__(self):
